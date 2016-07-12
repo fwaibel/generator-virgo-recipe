@@ -25,8 +25,7 @@ yo virgo-recipe
 
 ## License
 
-Apache-2.0 © [Florian Waibel](http://eclipsesource.com/blogs/author/fwaibel/)
-
+Eclipse Public License - v 1.0
 
 [npm-image]: https://badge.fury.io/js/generator-virgo-recipe.svg
 [npm-url]: https://npmjs.org/package/generator-virgo-recipe
