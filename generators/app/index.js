@@ -53,7 +53,6 @@ module.exports = yeoman.Base.extend({
       recipeName: this.props.recipeName,
       recipePackage: this.props.recipePackage
     };
-    var countWritten = 0;
     var templates = path.join(this.templatePath('.'), '/**/*.tpl');
     this.log('Using templates: \'' + templates + '\'.');
     var _this = this;
@@ -63,9 +62,7 @@ module.exports = yeoman.Base.extend({
       var dest = source.substring(0, source.length - '.tpl'.length);
       _this.fs.copyTpl(template, dest, context);
       _this.log('Done.');
-      countWritten++;
     });
-    this.log('Done. ' + countWritten + ' files written.');
   },
 
   install: function () {
