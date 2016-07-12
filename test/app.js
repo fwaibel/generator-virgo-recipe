@@ -12,7 +12,7 @@ describe('generator-virgo-recipe:app', function () {
 
   it('creates files', function () {
     assert.file([
-      'dummyfile.txt'
+      'settings.gradle'
     ]);
   });
 });

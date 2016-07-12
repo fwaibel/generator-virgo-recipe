@@ -11,11 +11,17 @@ module.exports = yeoman.Base.extend({
     ));
 
     var prompts = [{
-      type: 'confirm',
-      name: 'someAnswer',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
+      type: 'input',
+      name: 'recipeName',
+      message: 'What\'s the Virgo recipe name?',
+      default: 'Messaging with RabbitMQ'
+    },
+      {
+        type: 'input',
+        name: 'guideShortName',
+        message: 'What\'s the Spring Guide short name?',
+        default: 'messaging-rabbitmq'
+      }];
 
     return this.prompt(prompts).then(function (props) {
       // To access props later use this.props.someAnswer;
@@ -24,9 +30,10 @@ module.exports = yeoman.Base.extend({
   },
 
   writing: function () {
-    this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
+    this.fs.copyTpl(
+      this.templatePath('settings.gradle'),
+      this.destinationPath('settings.gradle'),
+      {guideShortName: this.props.guideShortName}
     );
   },
 
