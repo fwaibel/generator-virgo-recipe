@@ -8,7 +8,7 @@ buildscript {
 	}
 	dependencies {
 		classpath "gradle.plugin.org.eclipse.virgo.bundlor:bundlor-plugin:0.2"
-		classpath "gradle.plugin.com.eclipsesource.dockerizor:dockerizor:0.7.0"
+		classpath "gradle.plugin.com.eclipsesource.dockerizor:dockerizor:0.8.0"
 		classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.3'
 	}
 }
