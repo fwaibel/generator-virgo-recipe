@@ -148,8 +148,9 @@ configure(dockerProjects) {
 	dockerizor {
 		maintainer = 'Florian Waibel <fwaibel@eclipsesource.com>'
 
-		createLocalCopy = System.properties['local.build'] == 'true'
-		removeAdminConsole = System.properties['local.build'] != 'true'
+		createLocalCopy = System.properties['dockerizor.createLocalCopy'] ?: false
+		removeAdminConsole = System.properties['dockerizor.removeAdminConsole'] ?: true
+		removeSplash = System.properties['dockerizor.removeSplash'] ?: true
 
 		virgoFlavour = 'VTS'
 		virgoVersion = 'latest'
