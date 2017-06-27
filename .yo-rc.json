@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Florian Waibel",
+      "authorEmail": "fwaibel@eclipsesource.com",
+      "authorUrl": "http://eclipsesource.com/blogs/author/fwaibel/"
+    }
+  }
+}

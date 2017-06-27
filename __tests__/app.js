@@ -3,14 +3,13 @@ var path = require('path');
 var assert = require('yeoman-assert');
 var helpers = require('yeoman-test');
 
-describe('generator-virgo-recipe:app', function () {
-  before(function () {
+describe('generator-virgo-recipe:app', () => {
+  beforeAll(() => {
     return helpers.run(path.join(__dirname, '../generators/app'))
-      .withPrompts({someAnswer: true})
-      .toPromise();
+      .withPrompts({someAnswer: true});
   });
 
-  it('creates files', function () {
+  it('creates files', () => {
     assert.file([
       'settings.gradle'
     ]);
